@@ -6,7 +6,7 @@ first practice
 (defun insert-comment-char-to-tabstop ()
   (interactive)
   (insert
-   (make-string (- 60 (current-column)) ?/))
+   (make-string (- 60 (current-column)) (string-to-char comment-start)))
 )
 (global-set-key "\C-c/" 'insert-comment-char-to-tabstop)
 (add-hook 'text-mode-hook
