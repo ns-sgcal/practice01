@@ -16,5 +16,14 @@ first practice
 
 ```
 
+# code sample 2
+
+```elisp
+(defun cb-copy ()
+  (interactive)
+  (let ((coding-system-for-write 'utf-8))
+    (shell-command-on-region (region-beginning) (region-end) "cat > /dev/clipboard" nil nil nil))
+  (message ""))
+```
 
 
